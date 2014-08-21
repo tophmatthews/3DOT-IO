@@ -104,6 +104,6 @@ f.yes = f.escSum .* f.boxvol ./ f.atoms ./ f.fissions ./ 1e30 ./ f.pathAvg;
 % save(strcat(outputdir, outputname, '.mat'), 'f','r02cen','rf2cen',...
 %     'hitE','outE','fuelHits','fgHits','parent');
 
-save(strcat(outputdir, outputname, '.mat'), 'f');
+save(strcat(outputdir, outputname, '.mat'), 'f','-v7.3');
 
 %toc
