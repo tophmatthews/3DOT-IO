@@ -3,7 +3,7 @@
 clear
 tic
 
-outputdir = '/Volumes/datadrive/i/uc/output/';
+outputdir = '../../';
 outputname = 'uc';
 
 get_multiple

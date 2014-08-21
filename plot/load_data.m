@@ -1,17 +1,17 @@
 
 
-outputdir = '/Volumes/datadrive/legacyj/';
+outputdir = '/Volumes/datadrive/all_leg/';
 outputname = 'uc';
 avgtravel = 1460000.0;
 load(strcat(outputdir, outputname, '.mat'),'f');
 load(strcat(outputdir, outputname, 'e.mat'),'e');
 numbers = linspace(1,length(f.radius),length(f.radius));
 
-outputdir = '/Volumes/datadrive/newj2/';
+outputdir = '/Volumes/datadrive/all_reg/';
 outputname = 'uc';
-avgtravel = 91486.4;
+avgtravel = 80700.0;
 load(strcat(outputdir, outputname, '.mat'),'f');
-load(strcat(outputdir, outputname, 'e.mat'),'e');
+%load(strcat(outputdir, outputname, 'e.mat'),'e');
 numbers = linspace(1,length(f.radius),length(f.radius));
 
 outputdir = '/Volumes/datadrive/newj/';

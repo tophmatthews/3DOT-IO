@@ -10,11 +10,11 @@ end
 erlist = make_erlist( .01, f.escEr );
 
 boxlist = [];
-for i=1:1:length(f.box)
-    if length(find(f.box(i) == f.box)) >= 3
-        boxlist(end+1) = i;
-    end
-end
+% for i=1:1:length(f.box)
+%     if length(find(f.box(i) == f.box)) >= 3
+%         boxlist(end+1) = i;
+%     end
+% end
 
 figure
 x = f.radius./10.0;
