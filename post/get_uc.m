@@ -3,7 +3,7 @@
 clear
 tic
 
-outputdir = '../../';
+outputdir = '../../output/';
 outputname = 'uc';
 
 get_multiple
