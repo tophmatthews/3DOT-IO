@@ -8,7 +8,7 @@ for i = Elist
     ff = 0;
     lat = 0;
     for j = 1:1:length(f.outE{r})
-        if ( f.outE{r}(j) >= 10^i)
+        if ( f.outE{r}(j) >= 10^i)% && (1 - f.r02cen{r}(j)) *f.radius(r) < 10)
             if ( (f.fgHits{r}(j) + f.fuelHits{r}(j)) == 0 )
                 ff = ff + 1;
             else
@@ -40,6 +40,7 @@ for i = dlist
     dlatlist(end+1) = lat;
 end
 
+figure
 subplot(1,2,1)
 x = 10.^Elist;
 yff = efflist .* f.boxvol(r) ./ f.atoms(r) ./ f.fissions(r) ./ f.pathAvg(r) ./ 1e30 .* avgtravel;

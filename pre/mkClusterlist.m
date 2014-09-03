@@ -1,4 +1,4 @@
-function [ ] = mkClusterlist( outputdir, radius, boxsize, fissions, files, exe, basename, fueltype, legacy )
+function [ ] = mkClusterlist( outputdir, radius, boxsize, fissions, files, exe, basename, fueltype, legacy, bub_EOS )
 %mkClusterlist
 
 filelist = {};
@@ -22,7 +22,8 @@ for i=1:1:files
     fid = fopen(strcat(outputdir, filename),'w');
     stuff = strcat(pre, exe, 32, namenum, 32, num2str(radius), 32,...
                    num2str(boxsize), 32, num2str(fissions), 32,...
-                   num2str(fueltype), 32, num2str(legacy), 32, post);
+                   num2str(fueltype), 32, num2str(legacy), 32,...
+                   num2str(bub_EOS), post);
                
     fprintf(fid,'%s\n', stuff);
     fclose(fid);
