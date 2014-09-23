@@ -1,6 +1,6 @@
 clear
 outputdir = '/Users/topher/Dropbox/OSU/phd/3DOT/cluster/';
-basename = 'pmore_22';
+basename = 'tbig_22';
 fueltype = 'uc';
 exe = 'mytrim_bub';
 legacy = '0';
@@ -10,55 +10,32 @@ bub_EOS = '22';
 
 runs = zeros(0,3);
 
-% for i = [100]           % set radii
-%     for j = [300,400,500,600,700,800,900,1000]   % set box sizes
-%         runs(end+1,:) = [i,j];
-%     end
+logr = linspace(log10(10),log10(5e5),20);
+
+% for i = logr
+%     runs(end+1,:) = [round(10^i), round((10^i)*2 + 200), 20];
 % end
-    
-% f = 10;
-% for i = [250,500,750,1000,1250,1500,1750,2000,2250,2500]           % set radii
-%     for j = [5000]   % set box sizes
-%         runs(end+1,:) = [i,j,f];
-%     end
-% end 
 
-runs = [  10    ,     120  ,        10;
-          16    ,     150  ,        10;
-          25    ,     150  ,        10;
-          40    ,     180  ,        10;
-          50    ,     200  ,        10;
-          63    ,     220  ,        10;
-         101    ,     300  ,        10;
-         126    ,     325  ,        10;
-         158    ,     400  ,        10;
-         251    ,     600  ,        10;
-         398    ,     900  ,        10;
-         501    ,    1100 ,         10;
-         631    ,    1400 ,         10;
-        1001    ,    2100 ,         10;
-        1585     ,   3200 ,         10;
-        2501     ,   5200 ,         10;
-        3981     ,   4200 ,         20;
-        5001    ,   10200 ,         20;
-        6310    ,   13000 ,         20;
-       10000    ,   20200 ,         20;
-       15849    ,   31000 ,         20;
-       25119    ,   51000 ,         20;
-       39811    ,   80000 ,         20;
-       63096     , 13000 ,          20;
-      100000     , 202000 ,         20;
-      25,   100,    10;
-      25,   200,    10;
-      10,   150,    10;
-      50    150,    10;
-      1000, 2500,   10;
-      1000, 3000,   10;
-      900,  2500,   10;
-      1100, 2500,   10];
+% for i = [100, 500, 1000]           % set boxsize
+%     runs(end+1,:) = [round(i/20), i, 20];
+%     runs(end+1,:) = [round(i/15), i, 20];
+%     runs(end+1,:) = [round(i/10), i, 20];
+%     runs(end+1,:) = [round(i/5), i, 20];
+%     runs(end+1,:) = [round(i/2.5), i, 20];
+% end
+
+for i = [10,50,100,1000,10000]           % set boxsize
+%     runs(end+1,:) = [i, round(i*2 + 99), 20];
+%     runs(end+1,:) = [i, round(i*3), 20];
+%     runs(end+1,:) = [i, round(i*4), 20];
+%     runs(end+1,:) = [i, round(i*5), 20];
+%     runs(end+1,:) = [i, round(i*6), 20];
+    runs(end+1,:) = [i, round(i*8), 30];
+    runs(end+1,:) = [i, round(i*10), 40];
+    runs(end+1,:) = [i, round(i*20), 50];
+end
 
 
-         
 
 fissions = 1000;
 rho = 1; % 1 = calculate bubble rho, 0 = use default
