@@ -70,12 +70,12 @@ z = f.box;
 er = (f.escEr + 0.00001) .* 20000;
 %gscatter(log10(x),log10(bprime),f.box)
 %h2 = gscatter((x(boxlist)),(b(boxlist)),z(boxlist));
-h2 = gscatter((x),(b),z);
+%h2 = gscatter((x),(b),z);
 hold on
-h1 = gscatter(x,bprime,z);
+h1 = gscatter(x,b,z);
 %h3 = gscatter(x,bprime3,z)
 set(h1,'Marker','.','Markersize',10)
-set(h2,'Marker','o','Markersize',10)
+%set(h2,'Marker','o','Markersize',10)
 %set(h3,'Marker','*','Markersize',10)
 set(gca, 'XScale','log','YScale','linear','xtick',[1e1, 1e2, 1e3, 1e4, 1e5])
 graph_title = horzcat('b. Emin: ', num2str(Emin), '  dmin: ', num2str(dmin));

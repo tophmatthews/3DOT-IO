@@ -1,6 +1,6 @@
 clear
 outputdir = '/Users/topher/Dropbox/OSU/phd/3DOT/cluster/';
-basename = 'tbig_22';
+basename = 'tbig2_22';
 fueltype = 'uc';
 exe = 'mytrim_bub';
 legacy = '0';
@@ -30,9 +30,12 @@ for i = [10,50,100,1000,10000]           % set boxsize
 %     runs(end+1,:) = [i, round(i*4), 20];
 %     runs(end+1,:) = [i, round(i*5), 20];
 %     runs(end+1,:) = [i, round(i*6), 20];
-    runs(end+1,:) = [i, round(i*8), 30];
-    runs(end+1,:) = [i, round(i*10), 40];
-    runs(end+1,:) = [i, round(i*20), 50];
+%     runs(end+1,:) = [i, round(i*8), 30];
+%     runs(end+1,:) = [i, round(i*10), 40];
+%     runs(end+1,:) = [i, round(i*20), 50];
+    runs(end+1,:) = [i, round(i*15), 50];
+    runs(end+1,:) = [i, round(i*25), 60];
+    runs(end+1,:) = [i, round(i*9), 40];
 end
 
 

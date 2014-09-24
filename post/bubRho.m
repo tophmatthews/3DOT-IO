@@ -26,7 +26,7 @@ else
         rad = rad_2000;
     end
     arho = spline(rad,aden,log(r));
-    arho = exp(arho);% / 1e30; % return atoms/Ang^3
+    arho = exp(arho) / 1e30; % return atoms/Ang^3
     
 end
 
