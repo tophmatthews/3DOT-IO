@@ -1,7 +1,5 @@
-
+boxlist = [4,8,9,13,17,18,22,26,27,31,35];
 erlist = make_erlist( 10.01, f.escEr );
-
-
 
 L = length(f.radius);
 
@@ -27,12 +25,12 @@ x = f.radius/10;
 
 figure
 hold on
-plot(x,fuel,'k.')
+plot(x(boxlist),fuel(boxlist),'k')
 %plot(x,ffgas,'bd')
-plot(x,gas,'o','color',[0.33 0.41 0.47],'markersize',5)
-plot(x,met,'g+','markersize',5)
-plot(x,nonmet,'mx','markersize',5)
-plot(x,ff,'*','color',[0.80 0.36 0.27],'markersize',5)
+plot(x(boxlist),gas(boxlist),'o','color',[0.33 0.41 0.47],'markersize',5)
+plot(x(boxlist),met(boxlist),'g+','markersize',5)
+plot(x(boxlist),nonmet(boxlist),'mx','markersize',5)
+plot(x(boxlist),ff(boxlist),'*','color',[0.80 0.36 0.27],'markersize',5)
 set(gca, 'xscale','log')
 ylim([0 1])
 %xlim([0.8 5.2])

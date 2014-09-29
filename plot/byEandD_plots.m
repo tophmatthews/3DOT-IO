@@ -3,12 +3,12 @@ r = 13; % radius of 50 inicide
 efflist = []; elatlist = [];
 
 % by E
-Elist = linspace(1.0,8,20);
+Elist = linspace(1.0,8,30);
 for i = Elist
     ff = 0;
     lat = 0;
     for j = 1:1:length(f.outE{r})
-        if ( f.outE{r}(j) >= 10^i) && (1 - f.r02cen{r}(j)) *f.radius(r) < 10
+        if ( f.outE{r}(j) >= 10^i)% && (1 - f.r02cen{r}(j)) *f.radius(r) < 10
             if ( f.fuelHits{r}(j) == 0 )
             %if ( (f.fgHits{r}(j) + f.fuelHits{r}(j)) == 0 )
                 ff = ff + 1;
@@ -51,16 +51,16 @@ lit_lognp = [-3.6,-3.911,-4.108,-4.365,-4.559,-4.77,-5.156,-5.422,-6.371];
 figure
 %subplot(1,2,1)
 x = 10.^Elist;
-yff = efflist .* f.boxvol(r) ./ f.atoms(r) ./ f.fissions(r) ./ f.pathAvg(r) ./ 1e30 .* avgtravel.*1e19;
-ylat = elatlist .* f.boxvol(r) ./ f.atoms(r) ./ f.fissions(r) ./ f.pathAvg(r) ./ 1e30 .* avgtravel.*1e19;
+yff = efflist .* f.boxvol(r) ./ f.atoms(r) ./ f.fissions(r) ./ 1e30;
+ylat = elatlist .* f.boxvol(r) ./ f.atoms(r) ./ f.fissions(r) ./ 1e30;
 ytot = yff + ylat;
 hold on
 plot(x,yff,'-','color',[0.33 0.41 0.47])
 plot(x,ylat,'--','color',[0.80 0.36 0.27])
 plot(x,ytot,':','color','k')
 
-plot(10.^lit_logen, 10.^lit_logn,'-')
-plot(10.^lit_logenp, 10.^lit_lognp,'--')
+plot(10.^lit_logen, 10.^(lit_logn-19),'-')
+plot(10.^lit_logenp, 10.^(lit_lognp-19),'--')
 set(gca,'YScale','log','xscale','log')
 hold off
 xlabel('E_{min} [eV]')

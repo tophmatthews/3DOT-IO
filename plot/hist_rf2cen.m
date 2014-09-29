@@ -1,8 +1,8 @@
 
-list = [8,16,25];
+list = [4,13,22];
 
 %cen1 = -1000:1:-10;
-cen = -10:1:20;
+cen = -10:1:70;
 %cen3 = 10:1:1000;
 
 %cen = [cen1, cen2, cen3];
@@ -32,7 +32,7 @@ xlabel('nm from bubble')
 ylabel('Percent of Total')
 %set(gca,'YTickLabel',[])
 legend('5 nm','50 nm', '500 nm')
-xlim([-2 2])
-%ylim([0 0.1])
+%xlim([-2 2])
+ylim([0 10])
 box on
 hold off
