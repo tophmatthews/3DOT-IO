@@ -45,7 +45,7 @@ erlist = make_erlist( .005, f.escEr );
 %     end
 % end
 
-boxlist = [4,8,9,13,17,18,22,26,27,31,35,36,37];
+boxlist = [4,8,9,13,17,18,22,26,27,31];
 %boxlist = linspace(1,length(f.radius),length(f.radius));
 
 figure

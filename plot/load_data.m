@@ -1,5 +1,5 @@
 
-outputdir = '/Users/topher/Desktop/data/u/u_22/';
+outputdir = '/Users/topher/Desktop/data/u/u_32/';
 outputname = 'uc';
 f = load(strcat(outputdir, outputname, '.mat'),'f');
 f1 = f.f;
@@ -48,7 +48,7 @@ numbers = linspace(1,length(f.radius),length(f.radius));
 
 %%% load single
 
-outputdir = '/Users/topher/Desktop/data/t/t_22/';
+outputdir = '/Users/topher/Desktop/data/u/u_22/';
 outputname = 'uc';
 f = load(strcat(outputdir, outputname, '.mat'),'f');
 f = f.f;
